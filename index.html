@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body> 
+    <h1> CSS to JSS Conversion </h1>
+    <div style="display: flex;">
+    <form id="form" class="inputform">
+      <textarea id="input"></textarea>
+      <input type="submit">Convert</input>
+    </form>
+    <textarea id="output" class="outputform" readonly></textarea>
+    </div>
+  </body> 
+  <footer>
+    <style>
+      #input, #output {
+        box-sizing: border-box;
+        width: 50vw;
+        height: calc(100vh - 100px);
+      } 
+    </style>
+    <script>
+      const form = document.getElementById('form');
+      const inputTextArea = document.getElementById('input');
+      const outputTextArea = document.getElementById('output');
+
+      form.addEventListener('submit', updateOutput);
+
+      function updateOutput(event) {
+        event.preventDefault();
+        fetch('/api/transform', { method: 'POST', body: inputTextArea.value })
+          .then(resp => resp.text())
+          .then(transformed => {
+            outputTextArea.value = transformed
+          })
+      }
+    </script>
+  </footer
+</html>
