@@ -1,0 +1,27 @@
+{
+  "name": "css-to-jss",
+  "version": "1.0.0",
+  "description": "Converts css to jss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samouri/css-to-jss.git"
+  },
+  "keywords": [
+    "css",
+    "jss",
+    "conversion"
+  ],
+  "author": "samouri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samouri/css-to-jss/issues"
+  },
+  "homepage": "https://github.com/samouri/css-to-jss#readme",
+  "dependencies": {
+    "jss": "^10.4.0"
+  }
+}
