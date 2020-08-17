@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/transform.js": {
+      "includeFiles": "node_modules/*jss*/**/*.js"
+    }
+  }
+}
